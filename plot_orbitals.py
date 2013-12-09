@@ -51,6 +51,21 @@ def plot_2p0():
 	plt.show()
 	plt.close()
 
+def plot_3p0():
+	fig = plt.figure()
+
+	X = np.arange(-30, 30, 0.1)
+	Z = np.arange(-30, 30, 0.1)
+	X, Z = np.meshgrid(X, Z)
+
+	R = np.sqrt(X**2 + Z**2)
+	f = R**2 * (8/(27*27*np.pi))*(1 - R/6)**2 * Z**2 * np.exp(-.66666667*R)
+	plt.contourf(X, Z, f, 18, alpha=1, cmap='hot')
+
+	plt.show()
+	plt.close()
+
+
 def plot_3d0():
 	fig = plt.figure()
 
@@ -65,6 +80,35 @@ def plot_3d0():
 	plt.show()
 	plt.close()
 
+def plot_4p0():
+	fig = plt.figure()
+
+	X = np.arange(-35, 35, 0.05)
+	Z = np.arange(-35, 35, 0.05)
+	X, Z = np.meshgrid(X, Z)
+
+	R = np.sqrt(X**2 + Z**2)
+	f = R**2 * (1/(512*512*(5*np.pi))) * (80 - 20*R/6 + R**2)**2 * np.exp(-.5*R) * Z**2
+	plt.contourf(X, Z, f, 18, alpha=1, cmap='hot')
+
+	plt.show()
+	plt.close()
+
+def plot_4fz3():
+	fig = plt.figure()
+
+	X = np.arange(-35, 35, 0.05)
+	Z = np.arange(-35, 35, 0.05)
+	X, Z = np.meshgrid(X, Z)
+
+	R = np.sqrt(X**2 + Z**2)
+	f = R**2 * (1/(3072*3072*(5*np.pi))) * R**6 * (5*(Z/R)**3 - 3*(Z/R))**2 * np.exp(-.5*R)
+	plt.contourf(X, Z, f, 18, alpha=1, cmap='hot')
+
+	plt.show()
+	plt.close()
+
+
 
 plot_s1()
 
@@ -72,4 +116,10 @@ plot_s2()
 
 plot_2p0()
 
+plot_3p0()
+
 plot_3d0()
+
+plot_4p0()
+
+plot_4fz3()

@@ -148,14 +148,14 @@ plot_2s(radial=True)
 plot_2p0()
 plot_2p0(radial=True)
 
-plot_3p0()
-plot_3p0(radial=True)
+# plot_3p0()
+# plot_3p0(radial=True)
 
 plot_3d0()
 plot_3d0(radial=True)
 
-plot_4p0()
-plot_4p0(radial=True)
+# plot_4p0()
+# plot_4p0(radial=True)
 
-plot_4fz3()
-plot_4fz3(radial=True)
+# plot_4fz3()
+# plot_4fz3(radial=True)
